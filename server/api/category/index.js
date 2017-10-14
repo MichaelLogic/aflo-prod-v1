@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express = require('express');
+var category_controller_1 = require("./category.controller");
+var controller = new category_controller_1.default();
+var auth_service_1 = require("../../auth/auth.service");
+var auth = new auth_service_1.default();
+var router = express.Router();
+router.get('/', controller.index);
+router.get('/my', auth.isAuthenticated(), controller.index);
+router.get('/path/:category', controller.path);
+router.get('/all', controller.all);
+router.get('/loaded', controller.loaded);
+router.get('/blind', controller.orphans);
+router.get('/:id', controller.get);
+router.post('/', auth.hasRole('manager'), controller.create);
+router.put('/', auth.hasRole('manager'), controller.put);
+router.patch('/:id', auth.hasRole('manager'), controller.patch);
+router.delete('/:id', auth.hasRole('admin'), controller.remove);
+module.exports = router;
+//# sourceMappingURL=index.js.map

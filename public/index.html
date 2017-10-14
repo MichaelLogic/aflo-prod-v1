@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .news {
+      height: 60px;
+      margin: 10% auto;
+      overflow: hidden;
+      border-radius: 4px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      -webkit-user-select: none;
+    }
+
+    .news span {
+      float: left;
+      padding: 6px;
+      position: relative;
+      top: 1%;
+      border-radius: 4px;
+      font: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -webkit-user-select: none;
+      cursor: pointer
+    }
+
+    .news ul {
+      float: left;
+      padding-left: 20px;
+      animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+      -webkit-user-select: none
+    }
+
+    .news ul li {
+      line-height: 60px;
+      list-style: none
+    }
+
+    .news ul li a {
+      color: #999;
+      text-decoration: none;
+      font: 28px Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -webkit-user-select: none
+    }
+
+    @-webkit-keyframes ticker {
+      0% {
+        margin-top: 0
+      }
+      25% {
+        margin-top: -60px
+      }
+      50% {
+        margin-top: -120px
+      }
+      75% {
+        margin-top: -180px
+      }
+      100% {
+        margin-top: 0
+      }
+    }
+
+    @-moz-keyframes ticker {
+      0% {
+        margin-top: 0
+      }
+      25% {
+        margin-top: -60px
+      }
+      50% {
+        margin-top: -120px
+      }
+      75% {
+        margin-top: -180px
+      }
+      100% {
+        margin-top: 0
+      }
+    }
+
+    @-ms-keyframes ticker {
+      0% {
+        margin-top: 0
+      }
+      25% {
+        margin-top: -60px
+      }
+      50% {
+        margin-top: -120px
+      }
+      75% {
+        margin-top: -180px
+      }
+      100% {
+        margin-top: 0
+      }
+    }
+
+    @keyframes ticker {
+      0% {
+        margin-top: 0
+      }
+      25% {
+        margin-top: -60px
+      }
+      50% {
+        margin-top: -120px
+      }
+      75% {
+        margin-top: -180px
+      }
+      100% {
+        margin-top: 0
+      }
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    AfloCommerce
+  </title>
+  <meta name="description" content="AfloCommerce">
+  <!-- base url -->
+  <base href="/">
+  
+    <!-- Configured Head Tags  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/manifest.json">
+	<meta name="msapplication-TileColor" content="#00bcd4">
+	<meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#00bcd4">
+      
+
+
+        
+
+          
+
+              <!-- Async Google Analytics: change UA-71073175-1 to be your site's ID -->
+              <script>
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                ga('create', 'UA-71073175-1', 'auto');
+                ga('send', 'pageview');
+              </script>
+              <script async src="https://www.google-analytics.com/analytics.js"></script>
+              <!-- End Google Analytics -->
+
+              <!-- CSS will be injected by webpack here -->
+              <!-- Preload link tags will be injected by webpack here -->
+
+<link href="main.c669652318ee23f35bf9216b31936633.css" rel="stylesheet"><link rel="preload" href="main.36a0843d299035474ef0.bundle.js" as="script"/><link rel="preload" href="polyfills.4a703c7167e478e19ace.bundle.js" as="script"/></head>
+
+<body>
+
+  <app>
+    <div class="news">
+      <span></span>
+      <ul>
+        <li><a href="#">Contacting Server...</a></li>
+        <li><a href="#">Loading CSS...</a></li>
+        <li><a href="#">Loading Javascript...</a></li>
+        <li><a href="#">Preparing Application...</a></li>
+      </ul>
+    </div>
+  </app>
+
+  <!-- Scripts will be injected by webpack here -->
+<script type="text/javascript" src="main.36a0843d299035474ef0.bundle.js" async></script><script type="text/javascript" src="polyfills.4a703c7167e478e19ace.bundle.js"></script></body>
+
+</html>

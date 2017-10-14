@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express = require('express');
+var order_controller_1 = require("./order.controller");
+var controller = new order_controller_1.default();
+var auth_service_1 = require("../../auth/auth.service");
+var auth = new auth_service_1.default();
+var router = express.Router();
+router.get('/my', auth.isAuthenticated(), controller.myOrders);
+router.get('/', auth.hasRole('vendor'), controller.index);
+router.get('/pending', auth.hasRole('vendor'), controller.pending);
+router.get('/shipped', auth.hasRole('vendor'), controller.shipped);
+router.get('/cancelled', auth.hasRole('vendor'), controller.cancelled);
+router.get('/delivered', auth.hasRole('vendor'), controller.delivered);
+router.get('/:id', auth.hasRole('vendor'), controller.get);
+router.post('/', auth.isAuthenticated(), controller.create);
+router.put('/:id', auth.hasRole('vendor'), controller.patch);
+router.patch('/:id', auth.hasRole('vendor'), controller.patch);
+router.delete('/:id', auth.hasRole('admin'), controller.delete);
+module.exports = router;
+//# sourceMappingURL=index.js.map
