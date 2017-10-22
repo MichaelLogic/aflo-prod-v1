@@ -8,6 +8,7 @@ var auth = new auth_service_1.default();
 var router = express.Router();
 router.get('/', controller.getAll);
 router.get('/:id', controller.get);
+router.get('/deep/:id', controller.showDeep);
 router.post('/', auth.hasRole('admin'), controller.create);
 router.put('/:id', auth.hasRole('admin'), controller.patch);
 router.patch('/:id', auth.hasRole('admin'), controller.patch);

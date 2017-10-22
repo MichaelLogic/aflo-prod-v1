@@ -10,7 +10,7 @@ var PartnerSchema = new mongoose.Schema({
     city: String,
     state: String,
     country: String,
-    catalogSources: Array,
+    catalogSources: [{ type: ObjectId, ref: 'CatalogSource' }],
     suggestedGoods: Array,
     created_at: { type: Date },
     updated_at: { type: Date, default: Date.now },

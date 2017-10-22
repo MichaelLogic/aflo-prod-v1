@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose = require("mongoose");
 var ObjectId = mongoose.Schema.ObjectId;
 var CatalogSourceSchema = new mongoose.Schema({
-    partner: { type: ObjectId, ref: 'Partner' },
     title: String,
     description: String,
     sourcePath: String,
