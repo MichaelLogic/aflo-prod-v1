@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
-var payment_method_model_1 = require("./payment-method.model");
+var credit_method_model_1 = require("./credit-method.model");
 var base_1 = require("./../base");
-var PaymentMethodCtrl = (function (_super) {
-    tslib_1.__extends(PaymentMethodCtrl, _super);
-    function PaymentMethodCtrl() {
+var CreditMethodCtrl = (function (_super) {
+    tslib_1.__extends(CreditMethodCtrl, _super);
+    function CreditMethodCtrl() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.model = payment_method_model_1.default;
+        _this.model = credit_method_model_1.default;
         _this.my = function (req, res) {
             req.query.where = { uid: req.user._id };
             req.query.sort = '-updatedAt';
@@ -17,18 +17,18 @@ var PaymentMethodCtrl = (function (_super) {
             req.body.uid = req.user._id;
             _this.insert(req, res);
         };
-        //Get list of active PaymentMethods
+        //Get list of active CreditMethods
         _this.active = function (req, res) {
-            payment_method_model_1.default.find({ active: true }).exec(function (err, PaymentMethods) {
+            credit_method_model_1.default.find({ active: true }).exec(function (err, CreditMethods) {
                 if (err) {
                     return this.handleError(res, err);
                 }
-                return res.status(200).json(PaymentMethods);
+                return res.status(200).json(CreditMethods);
             });
         };
         return _this;
     }
-    return PaymentMethodCtrl;
+    return CreditMethodCtrl;
 }(base_1.default));
-exports.default = PaymentMethodCtrl;
-//# sourceMappingURL=payment-method.controller.js.map
+exports.default = CreditMethodCtrl;
+//# sourceMappingURL=credit-method.controller.js.map

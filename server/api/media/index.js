@@ -8,7 +8,7 @@ var express = require('express');
 var router = express.Router();
 var multiparty = require('connect-multiparty');
 var multipartyMiddleware = multiparty();
-var router = express.Router();
+//var router = express.Router();
 router.use(multiparty({ uploadDir: './uploads' }));
 router.post('/', auth.isAuthenticated(), multipartyMiddleware, controller.create);
 // router.post('/product', auth.isAuthenticated(), multipartyMiddleware, controller.updateProductImage);

@@ -22,6 +22,12 @@ var AfloBaseCtrl = (function () {
                 }
             };
         };
+        this.respondWithHuntResult = function (res, retGoods) {
+            console.log("AfloBaseCtrl: RET GOODS >>", retGoods);
+            return function () {
+                res.status(200).json({ msg: 'TEST' });
+            };
+        };
         this.saveUpdates = function (updates) {
             return function (entity) {
                 var updated = _.extend(entity, updates);
@@ -126,6 +132,10 @@ var AfloBaseCtrl = (function () {
                 .then(_this.handleEntityNotFound(res))
                 .then(_this.removeEntity(res))
                 .catch(_this.handleError(res));
+        };
+        //**  Price Parsing Helper
+        this.parseFloatIgnoreCommas = function (currency) {
+            return Number(currency.replace(/[^0-9\.-]+/g, "")).toFixed(2);
         };
     }
     return AfloBaseCtrl;

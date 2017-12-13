@@ -8,7 +8,6 @@ var config_1 = require("./../../config");
 var config = new config_1.default();
 var mongoose = require("mongoose");
 var async = require("async");
-//sync = require("async");
 var PartnerCtrl = (function (_super) {
     tslib_1.__extends(PartnerCtrl, _super);
     function PartnerCtrl() {

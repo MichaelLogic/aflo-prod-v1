@@ -15,6 +15,9 @@
         width: 70% !important;
         height: auto;
     }
+    .brand img {
+      box-shadow: none;
+    }
     .news {
       height: 60px;
       margin: 10% auto;
@@ -165,10 +168,10 @@
 
           
 
-              <!-- Async Google Analytics: change UA-71073175-1 to be your site's ID -->
+              <!-- Async Google Analytics: change to be your site's ID -->
               <script>
                 window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
-                ga('create', 'UA-71073175-1', 'auto');
+                ga('create', '#', 'auto');
                 ga('send', 'pageview');
               </script>
               <script async src="https://www.google-analytics.com/analytics.js"></script>
@@ -177,11 +180,11 @@
               <!-- CSS will be injected by webpack here -->
               <!-- Preload link tags will be injected by webpack here -->
 
-<link href="main.c669652318ee23f35bf9216b31936633.css" rel="stylesheet"><link rel="preload" href="main.0caca90be100c42669e8.bundle.js" as="script"/><link rel="preload" href="polyfills.4a703c7167e478e19ace.bundle.js" as="script"/></head>
+<link href="main.c669652318ee23f35bf9216b31936633.css" rel="stylesheet"><link rel="preload" href="main.317c5b245288b7ac1f3f.bundle.js" as="script"/><link rel="preload" href="polyfills.4a703c7167e478e19ace.bundle.js" as="script"/></head>
 
 <body>
 
-  <app>
+  <app class="skyline-bg">
     <div class="logo-loader">
       <img src="assets/img/logo_shubertcycles_big.png" alt="Shubert Cycles" />
     </div>
@@ -189,14 +192,15 @@
       <span></span>
       <ul>
         <li><a href="#">Contacting Server...</a></li>
-        <li><a href="#">Loading CSS...</a></li>
-        <li><a href="#">Loading Javascript...</a></li>
-        <li><a href="#">Preparing Application...</a></li>
+        <li><a href="#">Loading Shubert Cycles modules ...</a></li>
+        <li><a href="#">One moment please ...</a></li>
       </ul>
     </div>
   </app>
 
   <!-- Scripts will be injected by webpack here -->
-<script type="text/javascript" src="main.0caca90be100c42669e8.bundle.js" async></script><script type="text/javascript" src="polyfills.4a703c7167e478e19ace.bundle.js"></script></body>
+  <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+  
+<script type="text/javascript" src="main.317c5b245288b7ac1f3f.bundle.js" async></script><script type="text/javascript" src="polyfills.4a703c7167e478e19ace.bundle.js"></script></body>
 
 </html>

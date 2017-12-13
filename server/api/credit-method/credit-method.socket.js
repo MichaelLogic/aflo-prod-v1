@@ -3,15 +3,15 @@
  * Broadcast updates to client when the model changes
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var payment_method_events_1 = require("./payment-method.events");
+var credit_method_events_1 = require("./credit-method.events");
 // Model events to emit
 var events = ['save', 'remove'];
 function register(socket) {
     // Bind model events to socket events
     for (var i = 0, eventsLength = events.length; i < eventsLength; i++) {
         var event = events[i];
-        var listener = createListener("PaymentMethod:" + event, socket);
-        payment_method_events_1.default.on(event, listener);
+        var listener = createListener("CreditMethod:" + event, socket);
+        credit_method_events_1.default.on(event, listener);
         socket.on('disconnect', removeListener(event, listener));
     }
 }
@@ -23,7 +23,7 @@ function createListener(event, socket) {
 }
 function removeListener(event, listener) {
     return function () {
-        payment_method_events_1.default.removeListener(event, listener);
+        credit_method_events_1.default.removeListener(event, listener);
     };
 }
-//# sourceMappingURL=payment-method.socket.js.map
+//# sourceMappingURL=credit-method.socket.js.map
