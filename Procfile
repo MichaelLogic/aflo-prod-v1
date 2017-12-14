@@ -1,1 +1,1 @@
-web: node server/app
+web: npm run start:prod
